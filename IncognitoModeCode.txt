@@ -1,0 +1,16 @@
+Chrome:
+DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+ChromeOptions options = new ChromeOptions();
+options.addArguments("incognito");
+capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+
+
+FireFox:
+FirefoxProfile firefoxProfile = new FirefoxProfile();
+firefoxProfile.setPreference("browser.privatebrowsing.autostart", true);
+
+
+Internet Explorer:
+DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+capabilities.setCapability(InternetExplorerDriver.FORCE_CREATE_PROCESS, true);
+capabilities.setCapability(InternetExplorerDriver.IE_SWITCHES, "-private");
